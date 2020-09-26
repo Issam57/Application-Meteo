@@ -1,17 +1,3 @@
-let dateAujourdhui = new Date();
-
-dateAujourdhui.toLocaleDateString('fr-FR', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: '2-digit',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric'
-})
-
-let date = document.querySelector('#date').textContent = dateAujourdhui
-
 let ville = 'Paris';
 recevoirTemperature(ville);
 
@@ -45,3 +31,17 @@ requete.onload = function() {
         }
     }
 }
+
+let dateAujourdhui = new Date();
+
+dateAujourdhui.toLocaleDateString(navigator.language, {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: '2-digit',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+})
+
+let date = document.querySelector('#date').textContent = dateAujourdhui
